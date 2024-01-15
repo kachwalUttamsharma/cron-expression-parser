@@ -1,0 +1,38 @@
+{
+	"info": {
+		"_postman_id": "6adcddd8-f097-4115-9ad2-434d0c954f11",
+		"name": "Cron-Parser",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "http://localhost:3000/parse-cron",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"cronString\": \"*/16 0 1,15 * 1-5 /usr/bin/find\"}"
+				},
+				"url": {
+					"raw": "http://localhost:3000/parse-cron",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"parse-cron"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
