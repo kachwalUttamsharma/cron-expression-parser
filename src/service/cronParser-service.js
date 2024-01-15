@@ -52,7 +52,11 @@ const expandField = (field, min, max) => {
 
   if (field.includes("-")) {
     const [start, end] = field.split("-").map((value) => parseInt(value));
-    return Array.from({ length: end - start + 1 }, (_, i) => i + start);
+    const result = [];
+    for (let i = start; i <= end; i++) {
+      result.push(i);
+    }
+    return result;
   }
 
   return [parseInt(field)];
